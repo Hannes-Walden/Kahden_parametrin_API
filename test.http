@@ -1,1 +1,7 @@
 GET http://localhost:5089/api
+
+###
+GET http://localhost:5089/api/9/13
+
+###
+POST http://localhost:5089/api/2/5

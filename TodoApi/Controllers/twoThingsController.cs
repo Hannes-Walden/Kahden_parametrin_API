@@ -7,13 +7,22 @@ namespace TodoApi.Controllers;
 public class twoThingsController : ControllerBase
 {
 
+
     [HttpGet(Name = "Kahden_parametrin_API")]
     public IEnumerable<int> Get()
     {
         return Enumerable.Range(1, 5000).ToArray();
     }
 
+
+    [HttpGet("{p1}/{p2}")]
     public IEnumerable<int> Get(int p1, int p2)
+    {
+        return Enumerable.Range(p1, p2).ToArray();
+    }
+
+    [HttpPost("{p1}/{p2}")]
+    public IEnumerable<int> Post(int p1, int p2)
     {
         return Enumerable.Range(p1, p2).ToArray();
     }
