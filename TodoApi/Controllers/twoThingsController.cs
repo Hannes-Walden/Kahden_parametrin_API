@@ -18,12 +18,18 @@ public class twoThingsController : ControllerBase
     [HttpGet("{p1}/{p2}")]
     public IEnumerable<int> Get(int p1, int p2)
     {
+        // tarkista löytyykö annetut p1 ja p2 levylle kirjoitetusta tiedostosta.
+
         return Enumerable.Range(p1, p2).ToArray();
     }
 
     [HttpPost("{p1}/{p2}")]
     public IEnumerable<int> Post(int p1, int p2)
     {
+        // kirjoita annetut arvot tiedostoon levylle.
+        // katso esim.file.writeAllLines.
+        // C# file.writeAllLines example (Googlaa tämä)
+
         return Enumerable.Range(p1, p2).ToArray();
     }
 }
